@@ -1,0 +1,486 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  width: 100vw;
+  height: 200vh;
+  grid-template-columns: repeat(20, 5vw);
+  grid-template-rows: repeat(45, 5vh);
+  background-image: linear-gradient(to bottom, #41292c, #335484, #4c8577);
+  background-image: no-repeat;
+  background-size: cover;
+}
+
+/* Стили для header  */
+.header {
+  z-index: 2;
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 21;
+  opacity: 0.5;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #4c8577;
+  transition: 400ms;
+}
+
+.header:hover {
+  opacity: 1;
+}
+
+.header > .headerButton {
+  display: none;
+}
+
+.header header {
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+header > a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sport-title {
+  display: none;
+}
+
+.work-title {
+  display: none;
+}
+
+/* Стили для section-1 */
+
+.section_1 {
+  grid-row-start: 6;
+  grid-row-end: 22;
+  grid-column-start: 3;
+  grid-column-end: 19;
+  display: flex;
+  flex-direction: row;
+  gap: 4vmin;
+  top: 25%;
+  left: 15%;
+}
+
+.section_1 > div {
+  object-fit: cover;
+  object-position: center;
+  width: 30vw;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.section-card > img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.section-card > img:hover {
+  transform: translateY(-10%);
+}
+
+.section-card:has(img:hover) p {
+  opacity: 1;
+}
+
+.section-card > p {
+  opacity: 0;
+  text-align: center;
+  bottom: 6vh;
+  font-size: 1.4vw;
+  color: white;
+  margin: 0;
+  position: relative;
+  transition: 600ms;
+}
+/* Стили для второй секции */
+
+.section_2{
+  background-color: #335484;
+  border-radius: 25px;
+  border: 1px solid white;
+  display: grid;
+  overflow: hidden;
+  grid-row-start: 22;
+  grid-row-end: 36;
+  grid-column-start: 3;
+  grid-column-end: 19;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(20, 5%);
+}
+
+.mobile-text{
+  display: none;
+}
+
+.card_img{
+  border: 1px solid white;
+  grid-row-start: 1;
+  grid-row-end: 21;
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+.card_img > img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card_text{
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 21;
+  grid-column-start: 9;
+  grid-column-end: 21;
+}
+
+.card_text ul{
+  color: white;
+  font-size: 1.5vw;
+  display: grid;
+  grid-template-rows: repeat(10, auto);
+  align-items: center;
+}
+
+.card_text_title{
+  text-align: center;
+  font-size: 2vw;
+}
+
+/* Стили для footer */
+.footer {
+  opacity: 0.8;
+  background-color: #4c8577;
+  display: grid;
+  grid-row-start: 39;
+  grid-row-end: 41;
+  grid-column-start: 1;
+  grid-column-end: 21;
+}
+
+.footer > .footer_links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer > .footer_links > a {
+  width: 3vw;
+  height: 3vw;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    width: 100vw;
+    height: 250vh;
+    grid-template-columns: repeat(20, 5vw);
+    grid-template-rows: repeat(50, 5vh);
+    background-image: linear-gradient(to bottom, #41292c, #335484, #4c8577);
+    background-image: no-repeat;
+    background-size: cover;
+  }
+
+  /* Стили для header  */
+  .header {
+    height: 10vw;
+    position: sticky;
+    z-index: 600;
+    top: 0;
+    opacity: 1;
+    background-color: #4c8577;
+    transition: 400ms;
+  }
+
+  .header:hover {
+    opacity: 1;
+  }
+
+  .header > .headerButton {
+    display: flex;
+    background-color: #4c8577;
+    width: 10vw;
+    height: 10vw;
+    z-index: 600;
+    position: absolute;
+    right: 0;
+    align-items: center;
+  }
+
+  .header > .burgerButton > img {
+    position: absolute;
+  }
+
+  .header header {
+    align-items: center;
+    z-index: 300;
+    background-color: #4c8577;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 24px;
+    color: white;
+  }
+
+  header > a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  /* Стили для section-1 */
+
+  .section_1 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 4vmin;
+    top: 20%;
+    left: 10%;
+    width: 80vw;
+  }
+
+  .sport-title {
+    display: block;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 19;
+  }
+  .sport-title > p {
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 7vw;
+  }
+
+  .section_1 > .section-card {
+    border: white 1px solid;
+    z-index: 100;
+    border-radius: 15px;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 80vw;
+    height: 60vh;
+    transition: 600ms;
+    overflow: hidden;
+    transform: rotate(6deg);
+  }
+
+  .section_1 > .section-card:nth-child(1) {
+    transform: rotate(6deg);
+  }
+  .section_1 > .section-card:nth-child(2) {
+    transform: rotate(12deg);
+  }
+  .section_1 > .section-card:nth-child(3) {
+    transform: rotate(4deg);
+  }
+
+  .section_1 > .section-card:nth-child(1):hover {
+    transform: rotate(8deg);
+  }
+  .section_1 > .section-card:nth-child(2):hover {
+    transform: rotate(10deg);
+  }
+  .section_1 > .section-card:nth-child(3):hover {
+    transform: rotate(12deg);
+  }
+
+  .section_1 > div {
+    width: 80vw;
+  }
+
+  .section-card > img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+
+  .section-card > img:hover {
+    transform: scale(1.2);
+  }
+
+  .section-card-work > img:hover {
+    transform: translateY(0);
+    background-color: #335484;
+    opacity: 0;
+  }
+
+  .section-card:has(img:hover) p {
+    opacity: 1;
+  }
+
+  .section-card > p {
+    background-color: #4c8577;
+    opacity: 1;
+    text-align: center;
+    height: 20vh;
+    bottom: 12vh;
+    font-size: 8vw;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    position: relative;
+    transition: 600ms;
+  }
+
+  /* Стили для второй секции */
+  .section_2{
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    display: grid;
+    overflow: hidden;
+    grid-row-start: 22;
+    grid-row-end: 48 !important;
+    grid-column-start: 3;
+    grid-column-end: 19;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(20, 5%);
+  }
+
+  .work-title{
+    color: white;
+    display: grid;
+    grid-row-start: 20;
+    grid-row-end: 20;
+    grid-column-start: 3;
+    grid-column-end: 18;
+  }
+
+  .work-title > p{
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 7vw;
+  }
+
+  .mobile-text{
+    z-index: 20;
+    opacity: 1;
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 21;
+  }
+  
+  .mobile-text p{
+    padding: 2vw;
+    color: white;
+    font-size: 8vw;
+  }
+  
+  .card_img{
+    z-index: 200;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid white;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 21;
+  }
+  
+  .card_img > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #335484;
+    transition: 2000ms;
+  }
+
+  .card_img > img:hover{
+    z-index: 10;
+    transform: rotateY(180deg);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .card_text{
+    background-color: none;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid white;
+    display: grid;
+    grid-row-start: 11;
+    grid-row-end: 21;
+    grid-column-start: 1;
+    grid-column-end: 21;
+  }
+  
+  .card_text ul{
+    background-color: transparent;
+    padding: 0;
+    color: white;
+    font-size: 3vw;
+    display: grid;
+    grid-template-rows: repeat(10, auto);
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .card_text_title{
+    text-align: center;
+    font-size: 5vw;
+  }
+  /* Стили для footer */
+  .footer {
+    z-index: 100000;
+    opacity: 0.9;
+    height: 8vh;
+    background-color: #4c8577;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+  }
+
+  .footer > .footer_links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer > .footer_links > a {
+    width: 8vw;
+    height: 8vw;
+  }
+}

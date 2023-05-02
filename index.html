@@ -1,10 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>My Website</title>
-</head>
-<body>
-<h1>Hello, World!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabira CV</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header" onclick="handleBurger()">
+      <div class="headerButton">
+        <img src="./resources/background_video2.mp4" alt="">
+      </div>
+      <header id="headerMenu">
+        <a href="#aboutMe">About me</a>
+        <a href="#education">Education</a>
+        <a href="#achievment">Achievment</a>
+      </header>
+    </div>
+    <div class="section_1">
+      <video autoplay muted loop>
+        <source src="./resources/background_video2.mp4" type="video/mp4" />
+      </video>
+      <div>
+        <img src="" alt="" />
+      </div>
+      <div class="welcome_text">
+        <p>/Hello world</p>
+        <a href="./pages/secondPage.html">
+          <button>View Experience</button>
+        </a>
+      </div>
+    </div>
+    <div class="section_2" id="aboutMe">
+      <div class="image_info">
+        <img src="./images/section_image.jpg" alt="Error" />
+      </div>
+      <div class="text-info">
+        <p class="text-name">Sabira Onbayeva</p>
+        <p class="text-secondary">Bachelor of Arts in Economics</p>
+        <div class="text-quote">
+          <q
+            >I will live each day as though I had all the power and influence
+            necessary to make it a perfect world. Through listening to and
+            serving others, I will learn new ideas and gain different
+            perspectives. I will strive to gain mastery over life’s challenges
+            through increasing my circle of influence and de-emphasizing those
+            areas of concern over which I have no control.</q
+          >
+        </div>
+      </div>
+    </div>
+    <div class="section_3" id="education">
+      <div class="education_image">
+        <img src="./images/section3_image.jpg" alt="" />
+      </div>
+      <div class="education_text">
+        <p>Courses taken</p>
+        <ul>
+          <li>Social Challenges of Climate Change</li>
+          <li>Matching Theory and Applications</li>
+          <li>Advanced Microeconomics</li>
+          <li>Web Programming and Problem Solving</li>
+          <li>Philosophy of Religion</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section_4" id="achievment">
+      <div class="achievment_image">
+        <img src="./images/section_4.jpg" alt="error" />
+      </div>
+      <div class="achievment_text">
+        <p class="achievment_title">Certificates</p>
+        <ul class="achievment_list">
+          <li>Leadership and Involvement Training Fall 2021 </li>
+          <li>Listening A Course 2019 – 2021 </li>
+          <li>Pronunciation Course </li>
+          <li>Conscious Consumption Course for Beginners 2.0</li>
+        </ul>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer_links">
+        <a href="https://www.instagram.com/_sbko_/"
+          ><img src="./images/icon_instagram.svg" alt=""
+        /></a>
+        <a href="mailto: sabira.onbayeva@nu.edu.kz"
+          ><img src="./images/icon_email.svg" alt=""
+        /></a>
+        <a href="https://github.com/Sabira012"
+          ><img src="./images/icon_github.svg" alt=""
+        /></a>
+      </div>
+    </footer>
+  </body>
+  <script src="main.js"></script>
 </html>
